@@ -43,7 +43,8 @@ Sample Output
 
 Format is: `metric name`, `absolute accuracy (x100)`, (`sample size`, `unweighted accuracy (x100)`).
 
-```2-0s: 78.469 (n=100403, unweighted=95.885)
+```
+2-0s: 78.469 (n=100403, unweighted=95.885)
 game_diff: 64.364 (n=117169, unweighted=92.567)
 game_wins: 62.919 (n=99762, unweighted=92.371)
 series_neustadtl: 48.463 (n=108610, unweighted=87.458)
