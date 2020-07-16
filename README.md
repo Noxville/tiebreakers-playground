@@ -41,7 +41,7 @@ Sample Output
 
 Format is: `metric name`, `absolute accuracy (x100)`, (`sample size`, `unweighted accuracy (x100)`).
 
-For k=8
+For num_teams=8
 ```
 2-0s: 78.469 (n=100403, unweighted=95.885)
 game_diff: 64.364 (n=117169, unweighted=92.567)
@@ -51,7 +51,7 @@ series_h2h: 47.126 (n=105514, unweighted=86.749)
 games_h2h: 43.581 (n=130613, unweighted=87.135)
 ```
 
-For k=6
+For num_teams=6
 ```
 2-0s: 79.731 (n=66146, unweighted=96.284)
 game_diff: 61.136 (n=79760, unweighted=91.982)
@@ -63,6 +63,8 @@ games_h2h: 43.260 (n=88757, unweighted=87.285)
 
 Interpretting Results
 ---------------------
+
+*(Looking at num_teams=8)*
 
 Using 2-0's (the number of series won 2-0) is the best metric for evaluating ties in the 8-team bo3 round robin format. In 100k runs it was used 100403 times (remember that there can be multiple ties in a single iteration of a simulation), and in 78.47% of those cases it did some work which contained no errors. Of all the individual rankings it considered, it was correct 95.89% of the time.
 
