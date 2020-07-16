@@ -18,8 +18,6 @@ Simulation
 
 The approach used here is to simulate multiple tournaments (of a specific format type) with entities of known skill, looking for cases when there are ties - and then seeing how multiple tiebreaker approaches would perform at using the existing data (but not the hidden true skill data) to separate the tied teams. 
 
-
-
 Although it's a bit counterintuitive in running a tournament when you know the exact skill of each competitor and then try measure the "accuracy" of tiebreakers to order the entities correctly there are two redeeming facts. Firstly the tournament itself has some known variance and this approach only works on sane formats, and secondly all we're doing here is measuring the resillience to upsets (i.e. we're attempting to extract some signal from the noisy results). 
 
 Tiebreakers can have multiple evaluatable outcomes, in a similar way to how we can score individual rounds of [Mastermind](https://en.wikipedia.org/wiki/Mastermind_(board_game)). For example let's say there are 3 entities tied that we wish to tiebreak [A, B, C] such that the true skills are A > B > C. Some possible outcomes are:
@@ -39,10 +37,11 @@ Separately we can evaluate the unweighted accuracy for each k choose 2 pair of e
 Sample Output
 -------------
 
-*this is from a 100k simulation*
+*These are each from 100k simulations in a bo3 round robin*
 
 Format is: `metric name`, `absolute accuracy (x100)`, (`sample size`, `unweighted accuracy (x100)`).
 
+For k=8
 ```
 2-0s: 78.469 (n=100403, unweighted=95.885)
 game_diff: 64.364 (n=117169, unweighted=92.567)
@@ -50,6 +49,16 @@ game_wins: 62.919 (n=99762, unweighted=92.371)
 series_neustadtl: 48.463 (n=108610, unweighted=87.458)
 series_h2h: 47.126 (n=105514, unweighted=86.749)
 games_h2h: 43.581 (n=130613, unweighted=87.135)
+```
+
+For k=6
+```
+2-0s: 79.731 (n=66146, unweighted=96.284)
+game_diff: 61.136 (n=79760, unweighted=91.982)
+game_wins: 60.452 (n=66488, unweighted=92.052)
+series_neustadtl: 48.681 (n=70196, unweighted=87.494)
+series_h2h: 47.619 (n=68441, unweighted=86.888)
+games_h2h: 43.260 (n=88757, unweighted=87.285)
 ```
 
 Interpretting Results
