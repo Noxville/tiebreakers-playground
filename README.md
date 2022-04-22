@@ -24,7 +24,7 @@ Tiebreakers can have multiple evaluatable outcomes, in a similar way to how we c
 
 * A > B > C (3 correct comparisons)
 * A > [B = C] (2 correct comparisons, 1 abstained comparison)
-* A > C > B (1 correct comparison, 2 incorrect comparisons)
+* A > C > B (2 correct comparisons, 1 incorrect comparison)
 * C > B > A (3 incorrect comparisons)
 
 Abstaining from making a decision isn't a bad quality of a tiebreaker: if we had a tiebreaker which was 99% correct but only gave a conclusive result 1% of the time this would be an incredible tiebreaker (we could call it the 'Dr House' of tiebreakers). Multiple excellent tiebreakers cascaded together mean we would very infrequently get the wrong answer.
