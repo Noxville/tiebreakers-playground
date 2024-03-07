@@ -27,7 +27,7 @@ Tiebreakers can have multiple evaluatable outcomes, in a similar way to how we c
 * A > C > B (2 correct comparisons, 1 incorrect comparison)
 * C > B > A (3 incorrect comparisons)
 
-Abstaining from making a decision isn't a bad quality of a tiebreaker: if we had a tiebreaker which was 99% correct but only gave a conclusive result 1% of the time this would be an incredible tiebreaker (we could call it the 'Dr House' of tiebreakers). Multiple excellent tiebreakers cascaded together mean we would very infrequently get the wrong answer.
+Abstaining from making a decision isn't a bad quality of a tiebreaker: if we had a tiebreaker which was 99% correct but only gave a conclusive result 1% of the time this would be an incredible tiebreaker. Multiple excellent tiebreakers cascaded together mean we would very infrequently get the wrong answer.
 
 Our goal is primarily to see which tiebreakers are absolutely correct when they do break any tie between any k number of tied entities. In the above examples: if, for any tiebreak there are X correct comparisons, Y abstained comparisons and Z incorrect comparisons then we consider the tiebreak "bad" if Z > 0, "good" if X > 0 and Z == 0, and "irrelevant" in all other cases. The term "absolute accuracy" is simply #good / (#good + #bad).
 
